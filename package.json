@@ -1,0 +1,38 @@
+{
+  "name": "VoltX",
+  "version": "1.0.0",
+  "description": "Voltx",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "d3": "^5.15.0",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "fuzzy-search": "^3.2.1",
+    "jskit-learn": "^0.2.0",
+    "jsonwebtoken": "^8.5.0",
+    "modelscript": "^2.4.0",
+    "mongoose": "^5.4.17",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "react": "^16.13.1",
+    "request": "^2.88.2",
+    "validator": "^10.11.0"
+  }
+}
